@@ -8,11 +8,6 @@
         <a href="{{ route('tributacao.show', $t['id']) }}">Detalhes</a>
         <a href="{{ route('tributacao.edit', $t['id']) }}">Alterar</a>
     </li>
-        @foreach ($t->produtos as $p)
-            <li>
-                {{ $p['nome'] }}
-            </li>
-        @endforeach
     @endforeach
 
 </ul>

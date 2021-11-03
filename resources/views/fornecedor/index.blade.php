@@ -4,7 +4,7 @@
 <ul>
     @foreach ($fornecedor as $f)
     <li>
-        {{ $f['id'] }} | {{ $f['nome'] }} | {{ $f['estado'] }} | {{ $f['descricao'] }}
+        {{ $f['id'] }} | {{ $f['nome'] }} | {{ $f['estado'] }} | {{ $f['endereco'] }}
         <a href="{{ route('fornecedor.show', $f['id']) }}">Detalhes</a>
         <a href="{{ route('fornecedor.edit', $f['id']) }}">Alterar</a>
     </li>

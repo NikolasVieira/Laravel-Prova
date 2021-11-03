@@ -4,13 +4,18 @@
 
 <form action="{{ route('produto.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
-    <input type="text" id="produto_nome" name="produto_nome" placeholder="Nome da produto">
+    <input type="text" id="descricao" name="descricao" placeholder="Descrição do Produto">
     <input type="number" id="preco" name="preco" placeholder="Preço do produto">
-    <input type="number" id="estoque" name="estoque" placeholder="Estoque do produto">
-    <select id="categoria_id" name="categoria_id">
+    <select id="fornecedor_id" name="fornecedor_id">
         <option>selecione</option>
-        @foreach ($categoria as $categorias)
-        <option value="{{ $categorias->id }}">{{ $categorias->categoria_nome }}</option>
+        @foreach ($fornecedor as $fornecedores)
+        <option value="{{ $fornecedores->id }}">{{ $fornecedores->nome }}</option>
+        @endforeach
+    </select>
+    <select id="tributacao_id" name="tributacao_id">
+        <option>selecione</option>
+        @foreach ($tributacao as $tributacoes)
+        <option value="{{ $tributacoes->id }}">{{ $tributacoes->tipo }}</option>
         @endforeach
     </select>
 
